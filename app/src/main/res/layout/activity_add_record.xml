@@ -8,6 +8,7 @@
         tools:context=".AddRecordActivity">
 
     <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
@@ -128,6 +129,8 @@
 
 
                     <Button
+                            android:id="@+id/key_dot"
+                            android:text="."
                             android:layout_weight="1"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -153,18 +156,21 @@
                     android:layout_height="match_parent">
 
                 <ImageButton
+                        android:id="@+id/key_category"
                         android:background="@android:color/white"
                         android:layout_weight="2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
 
                 <ImageButton
+                        android:id="@+id/key_back"
                         android:background="@android:color/white"
                         android:layout_weight="1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
 
                 <ImageButton
+                        android:id="@+id/key_done"
                         android:background="@android:color/white"
                         android:layout_weight="1"
                         android:layout_width="match_parent"
@@ -176,5 +182,43 @@
 
         </RelativeLayout>
     </LinearLayout>
+
+    <RelativeLayout
+            android:layout_above="@+id/linearLayout"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TextView
+                android:id="@+id/textViewDisplay"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:textSize="60dp"
+                android:text="0.00"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"/>
+
+        <EditText
+                android:id="@+id/editText"
+                android:textColor="@android:color/white"
+                android:paddingLeft="10dp"
+                android:textSize="30dp"
+                android:text="book"
+                android:layout_margin="10dp"
+                android:background="@drawable/bg_edit_text"
+                android:layout_below="@+id/textViewDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+        <android.support.v7.widget.RecyclerView
+                android:background="@android:color/white"
+                android:layout_margin="10dp"
+                android:layout_below="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
 
 </RelativeLayout>

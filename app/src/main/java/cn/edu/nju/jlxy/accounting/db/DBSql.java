@@ -20,7 +20,7 @@ public class DBSql {
             +"time integer,"
             +"date date)";
 
-    public static final String select_db_bytime="select DISTINCE * from Record where date=? order by time asc";
+    public static final String select_db_bytime="select DISTINCT * from Record where date=? order by time asc";
 
 
     public static final String select_db_bydate="select DISTINCE * from Record where date=? order by date asc";
